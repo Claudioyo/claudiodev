@@ -1,0 +1,43 @@
+# ==============================
+# ClaudioDev - Git Ignore
+# ==============================
+
+# --- Node / Next.js ---
+node_modules/
+.next/
+out/
+dist/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+venv/
+
+# --- Environment / Secrets ---
+.env
+.env.*
+!.env.example
+
+# --- Logs ---
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# --- Editors ---
+.vscode/
+.idea/
+
+# --- Operating System ---
+.DS_Store
+Thumbs.db
+
+# --- Testing / Coverage ---
+coverage/
+.pytest_cache/
+
+# --- Temporary files ---
+*.tmp
+*.temp
