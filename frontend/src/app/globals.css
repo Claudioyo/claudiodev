@@ -15,6 +15,12 @@
 
   --live: #22c55e;
 
+  --lab-bg: #111315;
+  --lab-surface: #171a1d;
+  --lab-border: rgba(255, 255, 255, 0.08);
+  --lab-cyan: #22d3ee;
+  --lab-blue: #3b82f6;
+
   --border-soft: rgba(107, 78, 61, 0.18);
   --shadow-soft: 0 18px 50px rgba(58, 39, 27, 0.08);
 }
@@ -78,4 +84,34 @@ select {
 ::selection {
   background: var(--coffee-medium);
   color: white;
+}
+
+@keyframes float-soft {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+
+  50% {
+    opacity: 1;
+  }
+}
+
+.float-soft {
+  animation: float-soft 5s ease-in-out infinite;
+}
+
+.pulse-soft {
+  animation: pulse-soft 2.2s ease-in-out infinite;
 }
