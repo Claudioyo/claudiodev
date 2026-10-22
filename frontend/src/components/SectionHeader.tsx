@@ -15,7 +15,7 @@ export default function SectionHeader({
     <div className="max-w-3xl">
       <p
         className={`font-mono text-sm uppercase tracking-[0.2em] ${
-          dark ? "text-zinc-400" : "text-[var(--coffee-medium)]"
+          dark ? "text-zinc-400" : "text-[var(--coffee-text)]"
         }`}
       >
         {eyebrow}

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | ClaudioDev",
   },
   description:
-    "Software, automation and artificial intelligence solutions built by Claudio.",
+    "ClaudioDev: portafolio profesional de desarrollo web, automatización, APIs REST y soluciones prácticas de IA. Los Labs reúnen proyectos en desarrollo o planificación, aún no disponibles para probar.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

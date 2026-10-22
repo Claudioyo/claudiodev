@@ -15,7 +15,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--border-soft)] bg-[rgba(246,241,231,0.88)] backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-[var(--border-soft)] bg-[var(--background)] backdrop-blur">
       <Container className="py-5">
         <div className="flex items-center justify-between">
           <a

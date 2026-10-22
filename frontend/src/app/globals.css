@@ -8,6 +8,7 @@
   --coffee-contrast: #fffaf2;
   --coffee-light: #d7b899;
   --coffee-medium: #b8875a;
+  --coffee-text: #8a5f3d;
   --coffee-dark: #6b4e3d;
 
   --black: #0d0d0d;
@@ -83,7 +84,7 @@ select {
 
 ::selection {
   background: var(--coffee-medium);
-  color: white;
+  color: #171310;
 }
 
 @keyframes float-soft {
