@@ -204,7 +204,11 @@ export default function Home() {
               </h3>
 
               <p className="mt-3 leading-7 text-zinc-400">
-                Objetivo previsto: capturar, validar y procesar leads mediante una API REST.
+                Problema: pequeños negocios reciben contactos de clientes y necesitan organizarlos para no perder oportunidades.
+              </p>
+
+              <p className="mt-3 leading-7 text-zinc-400">
+                Propósito previsto: desarrollar un sistema para recibir, validar y organizar prospectos mediante una API REST con Python y JSON.
               </p>
 
               <p className="mt-4 text-sm text-zinc-400">Tecnologías previstas:</p>
@@ -236,7 +240,11 @@ export default function Home() {
               </h3>
 
               <p className="mt-3 leading-7 text-zinc-400">
-                Objetivo previsto: desarrollar un asistente inteligente para atender y orientar a clientes dentro de ClaudioDev.
+                Problema: los negocios reciben preguntas repetitivas y necesitan responder de forma más eficiente.
+              </p>
+
+              <p className="mt-3 leading-7 text-zinc-400">
+                Propósito previsto: explorar un asistente de IA que ayude a orientar clientes y responder consultas frecuentes.
               </p>
 
               <p className="mt-4 text-sm text-zinc-400">Tecnologías previstas:</p>
@@ -267,7 +275,11 @@ export default function Home() {
               </h3>
 
               <p className="mt-3 leading-7 text-zinc-400">
-                Objetivo previsto: explorar soluciones de comercio electrónico e integraciones.
+                Problema: pequeños comercios necesitan presentar productos y administrar su información comercial digitalmente.
+              </p>
+
+              <p className="mt-3 leading-7 text-zinc-400">
+                Propósito previsto: explorar un catálogo digital, con posibilidades futuras de inventario e integraciones.
               </p>
             </article>
           </div>
