@@ -3,7 +3,55 @@ name: review-task
 description: Assess an implemented ClaudioDev task, its code diff and TEST evidence, and recommend corrections, additional evidence, or human consideration without running tests, applying fixes, or approving tasks.
 ---
 
-# Review Task — CDF 1.1
+# Review Task — CDF 1.3.0
+
+- **Individual version:** 1.0.0 (initial explicit individual version).
+- **Documentary antecedent:** previous heading CDF 1.1; this identifies the
+  historical framework, not an inferred individual Skill version.
+- **Compatibility:** CDF 1.3.0 exactly; CONFIRMED in the documentary/static scope
+  of TEST-001 and REVIEW-001. No future version range is assumed.
+- **Status:** ACCEPTED AND OPERATIONAL within that verified scope.
+- **Human acceptance — 2026-10-24 / H3-ACCEPT-01:** H3 approved; compatibility
+  is documentary/static only, without a guarantee of universal future agent
+  behavioral compliance. Individual version remains 1.0.0.
+- **Change record — 2026-10-24 / BUILD-002:** initial individual versioning,
+  mandatory full CORE loading and role-specific adaptation under CDF-PLAN-003
+  TASK-002/TASK-003. Preserve prior Git/documentary history; no prior individual
+  versions are invented. Unexpected contradictory history requires reassessment.
+
+## Required initial CORE loading — before operating
+
+1. Locate this exact `SKILL.md` and its containing directory. Resolve
+   `../../../docs/cdf/CDF-CORE.md` exclusively from that directory, NEVER from
+   the terminal working directory. The destination must be the same repository's
+   `<root>/docs/cdf/CDF-CORE.md`; contrast the repository root with Git when
+   available. If repository identity is ambiguous, stop the dependent operation.
+2. Read applicable `AGENTS.md` instructions and read the CORE IN FULL before
+   this Skill's substantive procedure. A link, remembered summary, title or
+   partial/truncated output is not a complete reading. Complete the reading
+   before proceeding; after context loss, load it again. Reuse a reading only
+   when its full content is available and its identified revision remains current.
+3. Check CORE identity `ClaudioDev Development Framework — CDF` and its declared
+   normative target `1.3.0` against this Skill's exact compatibility declaration.
+   Stop the dependent operation if CORE is missing, unreadable, incomplete,
+   truncated or incompatible, or conflicts with higher instructions. Do not
+   create, download, replace or silently select another CORE to bypass the stop.
+4. Apply CORE N-01/N-02 within the platform's effective instruction hierarchy.
+   Only initialization reads needed to locate instructions and CORE precede
+   this gate. Record the resolved CORE path, version and identified revision,
+   this Skill's individual version and the applicable authorization in the report.
+5. Use this Skill only within explicit authorized scope;
+   loading it does not activate CDF 1.3.0 or authorize another stage. CORE's
+   BUILD-001 delivery descriptions are historical; later explicit decisions
+   must be read without rewriting that history. Preserve H1/H2/H3 gates and
+   CORE N-14 stops. No checked compatibility or operational status may be
+   declared before TEST, REVIEW and final human acceptance.
+
+Common rules live only in [CDF-CORE](../../../docs/cdf/CDF-CORE.md). Apply its
+N-03/N-04 (impact), N-05/N-07 (stages and authorization), N-06 (documentation),
+N-09 (competences), N-10/N-11 (checks and exceptions), N-12/N-13 (evidence),
+N-14/N-15 (stops and human decisions) and N-16 (version history). This loading
+block is an instruction to READ that source, not a substitute copy of its rules.
 
 ## Purpose and invocation
 
@@ -43,7 +91,9 @@ changes, including unrelated untracked work; a dirty tree alone is not a defect.
 REVIEW authorization does not authorize tests or other Skills. Do not run lint,
 TypeScript, build, servers, browser tests, validators, or application commands
 on your own initiative. Additional TEST/BUILD execution or any modification
-requires independent authorization. Do not create persistent reports or update
+requires independent authorization sufficient for that separate stage.
+A prior explicit sequence authorization can cover it, but never turns execution
+or corrections into REVIEW work. Do not create persistent reports or update
 status files under REVIEW. Deliver the report in the conversation.
 
 ## Procedure
@@ -64,8 +114,10 @@ status files under REVIEW. Deliver the report in the conversation.
    passed. Label hypotheses rather than presenting them as confirmed defects.
 7. Produce actionable requests to BUILD and/or TEST without executing them.
    Choose the global conclusion using the precedence below.
-8. Check final local Git status, report limitations and the unchanged review
-   scope, deliver the Spanish report, and stop for human review.
+8. Check final local Git status, report limitations and unchanged review scope,
+   deliver the Spanish report and preserve all human milestones. Any separate
+   stage needs its own inputs and sufficient N-07 authorization; REVIEW itself
+   never executes that work or grants acceptance.
 
 ## Code and scope assessment
 
@@ -113,62 +165,27 @@ Attribute human evidence to the user with its stated scope and limitations.
 Human acceptance does not turn an unexecuted check into PASA. Do not claim global
 WCAG AA conformity or global security certification from partial evidence.
 
-## AC states and TEST traceability
+## AC states, global conclusions and TEST traceability
 
-Keep TEST's original IDs, states, and references alongside REVIEW's assessment.
-Do not rewrite TEST results. Explain disagreement or acceptance of evidence.
+Use CORE N-12's canonical matrix and "Estados y conclusiones globales
+conservados", REVIEW subsections, as the single definitions and precedence.
+Keep SUSTENTADO, NO SUSTENTADO, EVIDENCIA INSUFICIENTE and NO APLICA, and the
+global conclusions REQUIERE CORRECCIONES, REQUIERE EVIDENCIA ADICIONAL and
+LISTO PARA CONSIDERACIÓN HUMANA. Do not redefine their meanings here.
 
-| REVIEW AC state | Meaning |
-|---|---|
-| SUSTENTADO | Implementation and valid evidence sufficiently support the applicable criterion |
-| NO SUSTENTADO | A confirmed implementation defect or unmet criterion exists |
-| EVIDENCIA INSUFICIENTE | Available evidence cannot establish the criterion, including relevant unresolved contradictions or invalidated evidence |
-| NO APLICA | Excluded with a task-specific justification |
+Retain TEST's original states/IDs/references next to REVIEW's independent
+judgment. Explain disagreement, supported partial aspects and remaining gaps;
+never promote partial coverage into full AC satisfaction. Apply CORE N-11's
+exception requirements and the canonical REVIEW exception treatment, preserving
+unexecuted TEST states and insufficient AC judgments where applicable. Cite
+existing human decisions; do not invent risk acceptance or write exception files.
 
-A partial pass does not substantiate a compound AC. A confirmed violation
-prevents SUSTENTADO regardless of its severity. Missing evidence is not by
-itself proof of a product defect. Record the reason and required next step
-for every unsupported or insufficient assessment.
-
-An AC may have a specific aspect supported by partial evidence or code
-inspection, such as its editorial content, while mandatory technical checks
-remain PENDIENTE or BLOQUEADA. State the exact scope of that support and the
-checks still required. Do not present partial support as full satisfaction.
-If evidence required for the complete AC is insufficient, assign EVIDENCIA
-INSUFICIENTE to the overall AC and describe separately the supported aspect.
-
-## Global states and precedence
-
-Apply the first matching conclusion:
-
-1. **REQUIERE CORRECCIONES:** confirmed requirement/scope violations or
-   substantiated blocking risks exist, even if evidence is also incomplete.
-2. **REQUIERE EVIDENCIA ADICIONAL:** no confirmed violations or blocking risks,
-   but mandatory evidence is missing or relevant contradictions remain unresolved.
-3. **LISTO PARA CONSIDERACIÓN HUMANA:** all applicable AC are substantiated
-   and no blocking incidents remain, subject only to explicit human evidence
-   exceptions described below.
-
-LISTO PARA CONSIDERACIÓN HUMANA also requires sufficient, current evidence
-covering every mandatory applicable technical check, subject only to the
-explicit, justified, documented human exception with accepted residual risk
-described below. A supported aspect of an AC does not remove this requirement.
-An exception never converts an unexecuted test into PASA.
-
-Mandatory pending or blocked tests prevent a favorable recommendation unless
-an explicit documented human exception covers them. The exception must identify
-the exact scope, justification, and accepted residual risk. Cite that decision
-in the report; do not write a new exception file. If details are missing, request
-clarification rather than infer risk acceptance.
-
-Under a valid exception, keep the unexecuted test PENDIENTE/BLOQUEADA and the
-unsupported AC assessment EVIDENCIA INSUFICIENTE where applicable. A favorable
-recommendation must state the exception and remaining coverage gap prominently;
-it is not a claim that all tests passed. Exceptions to missing evidence do not
-silently waive confirmed AC violations or critical/high blocking risks.
-
-No conclusion approves the task, authorizes staging/commit/push, or permits
-deployment. Technical recommendation and human acceptance are separate.
+Passing to REVIEW with failed or incomplete TEST evidence under N-08 does not
+imply a favorable recommendation. Assess it using CORE's result precedence,
+limits and valid explicit human exceptions under N-11/N-12. An exception never
+turns a pending or failed test into PASA, nor neutralizes a confirmed violation
+or blocking risk.
+No recommendation grants human acceptance or Git/deployment permission (N-15).
 
 ## Findings and risks
 
@@ -194,7 +211,9 @@ why current evidence is inadequate, required environment/conditions, expected
 evidence, and permissions needed. Do not perform those checks under REVIEW.
 
 Both requests may coexist; the global conclusion still follows precedence.
-Present requests to the developer for independent authorization. An existing
+Present requests to the developer, identifying whether sufficient independent-stage
+authorization already exists or new permission is needed. Do not execute the
+requested work as REVIEW. An existing
 TEST pass does not prevent new review findings. If a future Skill is unavailable,
 provide the handoff in the conversation without assuming execution capability.
 
@@ -238,5 +257,8 @@ Write in Spanish in the conversation:
 REVIEW is complete when the available delivery and evidence have been assessed,
 applicable AC have traceable judgments, incidents/risks and missing evidence
 are explicit, and the recommendation and handoffs have been delivered.
-A completed review may require corrections or additional evidence. Stop and
-wait for human review; completion is not task approval or cycle closure.
+A completed review may require corrections or additional evidence. Deliver the
+recommendation for the independent human decision under CORE N-15; completion
+is not approval or cycle closure. Preserve required milestones and N-14 stops.
+Any separately authorized TEST/BUILD continuation must occur under that stage,
+not as REVIEW; do not request a sufficient permission again or bypass a stop.

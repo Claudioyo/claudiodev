@@ -3,7 +3,55 @@ name: test-task
 description: Verify an implemented ClaudioDev task against acceptance criteria after BUILD or a correction, and deliver reproducible evidence to REVIEW without applying fixes or approving tasks.
 ---
 
-# Test Task — CDF 1.1
+# Test Task — CDF 1.3.0
+
+- **Individual version:** 1.0.0 (initial explicit individual version).
+- **Documentary antecedent:** previous heading CDF 1.1; this identifies the
+  historical framework, not an inferred individual Skill version.
+- **Compatibility:** CDF 1.3.0 exactly; CONFIRMED in the documentary/static scope
+  of TEST-001 and REVIEW-001. No future version range is assumed.
+- **Status:** ACCEPTED AND OPERATIONAL within that verified scope.
+- **Human acceptance — 2026-10-24 / H3-ACCEPT-01:** H3 approved; compatibility
+  is documentary/static only, without a guarantee of universal future agent
+  behavioral compliance. Individual version remains 1.0.0.
+- **Change record — 2026-10-24 / BUILD-002:** initial individual versioning,
+  mandatory full CORE loading and role-specific adaptation under CDF-PLAN-003
+  TASK-002/TASK-003. Preserve prior Git/documentary history; no prior individual
+  versions are invented. Unexpected contradictory history requires reassessment.
+
+## Required initial CORE loading — before operating
+
+1. Locate this exact `SKILL.md` and its containing directory. Resolve
+   `../../../docs/cdf/CDF-CORE.md` exclusively from that directory, NEVER from
+   the terminal working directory. The destination must be the same repository's
+   `<root>/docs/cdf/CDF-CORE.md`; contrast the repository root with Git when
+   available. If repository identity is ambiguous, stop the dependent operation.
+2. Read applicable `AGENTS.md` instructions and read the CORE IN FULL before
+   this Skill's substantive procedure. A link, remembered summary, title or
+   partial/truncated output is not a complete reading. Complete the reading
+   before proceeding; after context loss, load it again. Reuse a reading only
+   when its full content is available and its identified revision remains current.
+3. Check CORE identity `ClaudioDev Development Framework — CDF` and its declared
+   normative target `1.3.0` against this Skill's exact compatibility declaration.
+   Stop the dependent operation if CORE is missing, unreadable, incomplete,
+   truncated or incompatible, or conflicts with higher instructions. Do not
+   create, download, replace or silently select another CORE to bypass the stop.
+4. Apply CORE N-01/N-02 within the platform's effective instruction hierarchy.
+   Only initialization reads needed to locate instructions and CORE precede
+   this gate. Record the resolved CORE path, version and identified revision,
+   this Skill's individual version and the applicable authorization in the report.
+5. Use this Skill only within explicit authorized scope;
+   loading it does not activate CDF 1.3.0 or authorize another stage. CORE's
+   BUILD-001 delivery descriptions are historical; later explicit decisions
+   must be read without rewriting that history. Preserve H1/H2/H3 gates and
+   CORE N-14 stops. No checked compatibility or operational status may be
+   declared before TEST, REVIEW and final human acceptance.
+
+Common rules live only in [CDF-CORE](../../../docs/cdf/CDF-CORE.md). Apply its
+N-03/N-04 (impact), N-05/N-07 (stages and authorization), N-06 (documentation),
+N-09 (competences), N-10/N-11 (checks and exceptions), N-12/N-13 (evidence),
+N-14/N-15 (stops and human decisions) and N-16 (version history). This loading
+block is an instruction to READ that source, not a substitute copy of its rules.
 
 ## Purpose and invocation
 
@@ -32,22 +80,17 @@ block verification.
 
 ## Authorization and execution effects
 
-A general TEST authorization permits lint, TypeScript without emission, and
-non-destructive checks within scope, unless the user limits execution further.
-Build, server startup, and persistent artifacts require explicit permission or
-an existing authorization covering them. Do not ask again when already covered.
-Reports and status changes in files also require permission.
+Apply the actual authorization boundaries in CORE N-07/N-09/N-14. A stage name
+or document approval alone is not a command/effect permission. Match proposed
+checks, paths, environment, outputs and transitions to the existing explicit
+scope; reuse sufficient permissions without asking again. Persistent reports,
+artifacts, build/server output and network effects must be covered explicitly.
 
-Inspect scripts and effects before execution. Build and development servers
-can generate files and access the network without editing source code. Evaluate
-active processes and shared output-directory conflicts before starting work.
-Do not build against output used by an active server without resolving the
-conflict within authorization. Do not stop unrelated processes.
-
-Missing tools or permissions do not make a mandatory check optional. Mark it
-PENDIENTE or BLOQUEADA with a reason. Follow environment approval controls for
-sandbox/network retries and report each attempt separately. Do not change
-configuration to obtain a pass or download missing tools implicitly.
+Inspect scripts/effects before execution and resolve shared-output conflicts
+within authorization; never stop unrelated processes. Missing tools or permissions
+do not make mandatory checks optional: classify under CORE's TEST states with
+reason and next step. Do not install, repair configuration or silently retry
+with changed effects. Report each authorized attempt and actual exit code.
 
 ## Procedure
 
@@ -72,8 +115,10 @@ configuration to obtain a pass or download missing tools implicitly.
 9. Compare final Git state with the baseline. Report generated or unexpected
    files without deleting, reverting, staging, or fixing them. Restore temporary
    browser settings when possible; report failed restoration.
-10. Deliver the Spanish report and REVIEW handoff in the conversation. Stop for
-    human review; do not update files or initiate BUILD automatically.
+10. Deliver the Spanish report and REVIEW handoff in the conversation. Observe
+    human milestones and N-14 stops. REVIEW may follow with failed/incomplete
+    evidence only if already authorized under N-07/N-08; do not update files,
+    initiate corrections or treat that transition as a favorable recommendation.
 
 ## Test selection matrix
 
@@ -83,8 +128,8 @@ shared-component consumers in regression coverage.
 | Change | Required applicable checks | Conditional checks |
 |---|---|---|
 | Any task | Git baseline/final state, scope/diff inspection, AC mapping, limitations | New-file and artifact inspection |
-| Documentation or Skills only | Consistency, references, authorization boundaries, diff formatting | Existing validator when available and permitted; no frontend build by default |
-| Frontend source | ESLint and TypeScript without emission | Build according to integration impact and permission |
+| Documentation or Skills only, without application generation effects | Consistency, references, authorization boundaries, traceability, diff formatting; no application build (CORE N-10) | Existing validator only when available, applicable and authorized |
+| Frontend source, including JSX text | Build mandatory by default under CORE N-10, plus applicable ESLint and TypeScript without emission | Additional checks by risk; build exceptions only under N-11 |
 | Visible UI or text | Actual browser inspection, affected content, wrapping, responsive layout | Keyboard, contrast, shared-component regression according to impact |
 | Navigation or interaction | Destinations, relevant states, keyboard activation, visible focus | Mobile menu, closing behavior, focus recovery |
 | Colors or transparency | Effective text/background contrast and affected interactive states | Sticky overlays over light/dark sections and compositing variations |
@@ -92,8 +137,13 @@ shared-component consumers in regression coverage.
 | Metadata, routes, Next.js configuration or integration | Build and generated output inspection | Production startup and HTML inspection when authorized |
 | Functional logic | Relevant expected, boundary, failure cases and existing affected tests | Unit/integration/E2E execution only with available infrastructure |
 
-Build is required before closing a cycle containing application changes,
-subject to authorization. Reuse prior evidence only when revision, environment,
+Apply CORE N-10 uniformly: application code/interface changes require build by
+default; critical/large application changes require risk-based expanded checks.
+Documentation feeding generated routes/content is treated by application effect.
+Only N-11 admits a human evidence/build exception; never relabel an unexecuted
+check as PASA or waive a confirmed AC violation. Without sufficient permission,
+a mandatory check remains incomplete under CORE's states, not optional.
+Reuse prior evidence only when revision, environment,
 and coverage remain valid. Explain which later changes require reruns and why.
 Mandatory checks without permission remain pending or blocked, never silently
 omitted.
@@ -150,45 +200,21 @@ generation and validation.
 
 ## Result states and reproducible evidence
 
-Use these states for each check and each applicable AC:
+Use CORE N-12's canonical matrix and its "Estados y conclusiones globales
+conservados" section, TEST subsections, as the single definitions of check/AC
+states and global precedence. Preserve these labels: PASA, FALLA, PENDIENTE,
+BLOQUEADA, NO APLICA; CON FALLOS, INCOMPLETO and SIN FALLOS EN EL ALCANCE VERIFICADO.
+Do not redefine their meanings locally. Apply compound-criterion coverage and
+failure precedence exactly as defined there; completion never grants approval.
 
-| State | Meaning |
-|---|---|
-| PASA | Executed or supported by attributed human evidence with sufficient coverage |
-| FALLA | Observed behavior contradicts the expected result |
-| PENDIENTE | A necessary check has not been executed or requires later validation, without an identified impediment preventing execution |
-| BLOQUEADA | An identified impediment prevents execution, such as an explicit prohibition, a missing indispensable tool, or an external dependency |
-| NO APLICA | Excluded with a change-specific justification |
+For reproducible evidence use CORE N-12 fields, including actual command/path,
+expected versus observed behavior, completion/exit code, environment and exact
+revision/diff. Label provenance automatic, browser-observed, calculated or human.
+Never fabricate screenshots, evidence paths, integration success or prior runs.
 
-For both PENDIENTE and BLOQUEADA, record the reason and the next step needed
-to resolve the state. Use BLOQUEADA when an identified impediment exists;
-do not classify the same check as merely PENDIENTE in that case.
-
-A partial pass is not a complete pass for a compound AC. Any confirmed failure
-keeps that AC FALLA even if other portions remain pending. Otherwise incomplete
-mandatory coverage prevents PASA. Keep execution results and human acceptance
-separate: TEST never marks the task approved.
-
-Apply global conclusions in this order:
-
-1. **CON FALLOS:** at least one check is FALLA, even when other checks are incomplete.
-2. **INCOMPLETO:** no checks are FALLA, but mandatory applicable checks remain
-   PENDIENTE or BLOQUEADA.
-3. **SIN FALLOS EN EL ALCANCE VERIFICADO:** all mandatory applicable checks
-   have sufficient evidence and are PASA.
-
-None of these conclusions constitutes human approval.
-
-For each result record, as applicable: test ID, task/AC, commit or identified
-diff, environment, date, command and working directory or browser steps,
-expected/observed behavior, exit code or measurements, evidence reference, and
-limitations. Label evidence as automatic, browser-observed, calculated, or
-human-reported. Never fabricate screenshots, paths, exit codes, integration
-success, or prior runs.
-
-After later changes, identify affected evidence and rerun failed checks and
-justified regressions. Historical results remain attached to their original
-revision; never silently promote stale evidence to the new implementation.
+For later changes apply CORE N-13: identify affected evidence, repeat failed
+checks and justified regressions only under sufficient authorization, and keep
+historical results attached to their original revision.
 
 ## Incidents and handoff
 
@@ -243,4 +269,6 @@ Write in Spanish, in the conversation, using this structure:
 TEST is complete when authorized applicable checks have been performed or
 explicitly accounted for, results/incidents are supported by evidence, and the
 report/handoff has been delivered. A completed TEST report can contain failures
-or pending checks. Wait for human review before further work.
+or pending checks. Any continuation requires sufficient existing authorization,
+all stage inputs and no mandatory stop under CORE N-05/N-07/N-14. Human milestones
+remain mandatory; further corrections require specifically authorized BUILD.

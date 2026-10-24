@@ -1,5 +1,20 @@
 
-# ClaudioDev Development Framework — CDF 1.0
+# ClaudioDev — Instrucciones del repositorio
+
+## CDF common normative source
+
+The common CDF normative source is [docs/cdf/CDF-CORE.md](docs/cdf/CDF-CORE.md).
+Before operating any of the six repository Skills, read it in full as required
+by that Skill's initial loading instructions; a reference alone is insufficient.
+
+CDF 1.3.0 and the six adapted Skills are accepted and operational within the
+documentary/static scope verified by TEST-001 and REVIEW-001 and accepted by
+the developer in H3-ACCEPT-01 on 2026-10-24. Compatibility is confirmed only
+within that scope; universal future agent behavioral compliance is not guaranteed.
+
+Apply CDF within the platform's effective instruction hierarchy and applicable
+AGENTS.md instructions. Neither this reference nor document approval grants
+execution permissions or removes existing explicit authorization limits.
 
 ## Project mission
 
